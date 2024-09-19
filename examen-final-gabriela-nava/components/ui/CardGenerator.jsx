@@ -9,7 +9,7 @@ export default function CardGenerator() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newCard = { name, collage, location }; // Usa `name`, `collage`, y `location`
+    const newCard = { name, collage, location }; 
     setCards([...cards, newCard]);
     setName('');
     setCollage('');
@@ -49,7 +49,7 @@ export default function CardGenerator() {
             id="location"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
-            placeholder="Ingresa tus datos"
+            placeholder="Ingresa la ubicación"
             required
             className="p-2 border rounded"
           />
@@ -60,9 +60,10 @@ export default function CardGenerator() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {cards.map((card, index) => (
           <div key={index} className="border rounded p-4">
+            <img src="https://play-lh.googleusercontent.com/L4ELB2PYiQriE4fgz-KisQTpBVNxXM3jXvTk4Wq9QM2CEQf0kL6UR41ty-KwhWYUJQfB=w240-h480-rw" alt="Rick" />
             <h2 className="text-xl font-bold mb-2">{card.name}</h2>
             <p className="mb-4">{card.collage}</p>
-            {card.location && <img src={card.location} alt={card.name} className="w-full h-48 object-cover rounded" />} {/* Asegúrate de que `location` sea una URL válida */}
+            <p className="mb-4">{card.location}</p>
           </div>
         ))}
       </div>
