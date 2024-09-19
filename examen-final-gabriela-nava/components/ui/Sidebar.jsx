@@ -7,7 +7,7 @@ const Sidebar = () => {
     <div className="bg-green-400 w-[220px] h-screen flex flex-col">
       <h1 className="p-4 text-2xl font-bold">Examen Final</h1>
 
-      <div className="flex flex-col flex-grow py-4 px-4">
+      <div className="flex flex-col flex-grow overflow-y-auto py-4 px-4">
         <a href="#card-generator" className="flex items-center mb-4 p-2 w-full text-black hover:bg-green-500">
           <Home className="mr-2" />
           <span>Card Generator</span>
