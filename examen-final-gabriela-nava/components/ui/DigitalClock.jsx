@@ -15,8 +15,8 @@ export default function DigitalClock() {
     }
   }, [])
 
-  const formatTime = () => {
-    return date.toLocaleTimeString('es-ES', {
+  const formatTime = (time) => {
+    return time.toLocaleTimeString('es-ES', {
       hour: '2-digit',
       minute: '2-digit',
       second: '2-digit',

@@ -21,7 +21,6 @@ const MainPage = () => {
 
 
         <section id="digital-clock" className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">Digital Clock</h2>
           <DigitalClock />
         </section>
 
