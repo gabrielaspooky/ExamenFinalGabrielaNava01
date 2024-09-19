@@ -1,41 +1,41 @@
-"use client"; // Asegúrate de usar esto en Next.js
+"use client"; 
 
 import React, { useEffect, useState } from 'react';
 
 export default function ProductFetcher() {
-  const [products, setProducts] = useState([]);  // Estado para productos
-  const [loading, setLoading] = useState(true);  // Estado de carga
-  const [error, setError] = useState(null);      // Estado de error
+  const [products, setProducts] = useState([]);  
+  const [loading, setLoading] = useState(true);  
+  const [error, setError] = useState(null);     
 
   useEffect(() => {
     async function fetchProducts() {
       try {
-        // Hacemos el fetch a la URL de la API
+     
         const response = await fetch('https://cafe-de-altura-alpha.vercel.app/api/products');
         if (!response.ok) {
           throw new Error('Error al obtener los productos');
         }
         const data = await response.json();
         
-        // Guardamos los productos en el estado
+      
         setProducts(data.products);
       } catch (error) {
-        setError(error.message);  // Capturamos errores
+        setError(error.message); 
       } finally {
-        setLoading(false);  // Terminamos la carga
+        setLoading(false);  
       }
     }
 
-    fetchProducts();  // Ejecutamos el fetch cuando el componente se monta
-  }, []);  // El array vacío asegura que solo se ejecute una vez
+    fetchProducts();  
+  }, []);  
 
-  // Renderizamos el estado de carga
+
   if (loading) return <p className="text-lg text-gray-500">Cargando productos...</p>;
 
-  // Renderizamos el estado de error
+
   if (error) return <p className="text-lg text-red-600">Error: {error}</p>;
 
-  // Renderizamos los productos si los obtenemos correctamente
+  
   return (
     <div>
          <h2 className="text-2xl font-medium text-[#2A5B45] leading-7 w-[120px] p-10 text-center">Novedades</h2>

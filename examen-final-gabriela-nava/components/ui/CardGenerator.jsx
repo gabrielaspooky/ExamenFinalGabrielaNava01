@@ -62,7 +62,7 @@ export default function CardGenerator() {
           <div key={index} className="border rounded p-4">
             <h2 className="text-xl font-bold mb-2">{card.name}</h2>
             <p className="mb-4">{card.collage}</p>
-            {card.location && <img src={card.location} alt={card.name} className="w-full h-48 object-cover rounded" />} {/* Asegúrate de que `location` sea una URL válida */}
+            {card.location && <img src={card.location} alt={card.name} className="w-full h-48 object-cover rounded" />} 
           </div>
         ))}
       </div>
