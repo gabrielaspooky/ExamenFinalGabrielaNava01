@@ -4,7 +4,7 @@ import Sidebar from '../../components/ui/Sidebar';
 import CardGenerator from '../../components/ui/CardGenerator';
 import DigitalClock from '../../components/ui/DigitalClock';
 // import DrillingInfo from './DrillingInfo';
-// import CardGallery from './CardGallery';
+import ProductCards from '../../components/ui/CardGallery';
 
 const MainPage = () => {
   return (
@@ -27,12 +27,11 @@ const MainPage = () => {
         {/* <section id="drilling-info" className="mt-8">
           <h2 className="text-2xl font-bold mb-4">Drilling Info</h2>
           <DrillingInfo />
-        </section>
+        </section> */}
 
         <section id="card-gallery" className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">Galería de Cartas</h2>
-          <CardGallery /> */}
-        {/* </section> */}
+          <ProductCards />
+        </section>
       </div>
     </div>
   );
