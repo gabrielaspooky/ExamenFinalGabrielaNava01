@@ -3,15 +3,12 @@ import React from 'react';
 import Sidebar from '../../components/ui/Sidebar';
 import CardGenerator from '../../components/ui/CardGenerator';
 import DigitalClock from '../../components/ui/DigitalClock';
-// import DrillingInfo from './DrillingInfo';
+import DrillingComponent from '../../components/ui/DrillingInfo';
 import ProductCards from '../../components/ui/CardGallery';
 
 const MainPage = () => {
   return (
     <div className="flex">
-
-      <Sidebar />
-
       <div className="flex-1 p-4">
 
         <section id="card-generator">
@@ -24,10 +21,9 @@ const MainPage = () => {
           <DigitalClock />
         </section>
 
-        {/* <section id="drilling-info" className="mt-8">
-          <h2 className="text-2xl font-bold mb-4">Drilling Info</h2>
-          <DrillingInfo />
-        </section> */}
+        <section id="drilling-info" className="mt-8">
+          <DrillingComponent />
+        </section>
 
         <section id="card-gallery" className="mt-8">
           <ProductCards />
