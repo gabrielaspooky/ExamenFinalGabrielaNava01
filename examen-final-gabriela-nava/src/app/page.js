@@ -2,7 +2,7 @@
 import React from 'react';
 import Sidebar from '../../components/ui/Sidebar';
 import CardGenerator from '../../components/ui/CardGenerator';
-// import DigitalClock from './DigitalClock'; // Otros componentes
+import DigitalClock from '../../components/ui/DigitalClock';
 // import DrillingInfo from './DrillingInfo';
 // import CardGallery from './CardGallery';
 
@@ -20,20 +20,20 @@ const MainPage = () => {
         </section>
 
 
-        {/* <section id="digital-clock" className="mt-8">
+        <section id="digital-clock" className="mt-8">
           <h2 className="text-2xl font-bold mb-4">Digital Clock</h2>
           <DigitalClock />
         </section>
 
-        <section id="drilling-info" className="mt-8">
+        {/* <section id="drilling-info" className="mt-8">
           <h2 className="text-2xl font-bold mb-4">Drilling Info</h2>
           <DrillingInfo />
         </section>
 
         <section id="card-gallery" className="mt-8">
           <h2 className="text-2xl font-bold mb-4">Galería de Cartas</h2>
-          <CardGallery />
-        </section> */}
+          <CardGallery /> */}
+        {/* </section> */}
       </div>
     </div>
   );
